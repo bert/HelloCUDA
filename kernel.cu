@@ -13,13 +13,21 @@
 
 cudaError_t addWithCuda (int *c, const int *a, const int *b, unsigned int size);
 
-__global__ void addKernel (int *c, const int *a, const int *b)
+__global__ void
+addKernel
+(
+  int *c,
+  const int *a,
+  const int *b
+)
 {
     int i = threadIdx.x;
     c[i] = a[i] + b[i];
 }
 
-int main ()
+int
+main
+()
 {
     const int arraySize = 5;
     const int a[arraySize] = {1, 2, 3, 4, 5};
@@ -49,8 +57,17 @@ int main ()
     return 0;
 }
 
-/* Helper function for using CUDA to add vectors in parallel. */
-cudaError_t addWithCuda (int *c, const int *a, const int *b, unsigned int size)
+/*!
+ * \brief Helper function for using CUDA to add vectors in parallel.
+ */
+cudaError_t
+addWithCuda
+(
+  int *c,
+  const int *a,
+  const int *b,
+  unsigned int size
+)
 {
     int *dev_a = 0;
     int *dev_b = 0;

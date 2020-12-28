@@ -1,9 +1,9 @@
 /*!
  * \file HelloCUDA/kernel.cu
  *
- * \author .
+ * \author Copyright (C) 2020 Bert Timmerman <bert.timmerman@xs4all.nl.
  *
- * \brief .
+ * \brief Testing CUDA hardware and code.
  */
 
 #include "cuda_runtime.h"
